@@ -9,6 +9,8 @@ import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
 import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 import 'axios';
 
+import './main.css'
+
 Vue.config.productionTip = false
 
 new Vue({
