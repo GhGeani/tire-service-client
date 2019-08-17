@@ -6,11 +6,9 @@
       li(data-target='#carouselExampleIndicators' data-slide-to='2')
     .carousel-inner
       .carousel-item.active
-        img.d-block.w-100(src='../assets/logo.png' alt='First Slide')
+        img.d-block.w-100(src='../assets/img1.jpeg' alt='First Slide')
       .carousel-item
-        img.d-block.w-100(src='../assets/logo.png' alt='Second Slide')
-      .carousel-item
-        img.d-block.w-100(src='../assets/logo.png' alt='Third Slide')
+        img.d-block.w-100(src='../assets/img2.jpeg' alt='Second Slide')
     a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
       span.carousel-control-prev-icon(aria-hidden="true")
       span.sr-only Previous
