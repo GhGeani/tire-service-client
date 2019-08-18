@@ -1,23 +1,27 @@
 <template lang="pug">
 main
-  navi
-  carousel
-  .container
-    router-view
-  contact
+  header
+    navi
+    carousel
+  section.container-fluid.mt-4.mb-4  
+    Home
+  footer.container
+    contact
 </template>
 
 <script>
 import navi from './components/navi'
 import carousel from './components/carousel'
 import contact from './components/contact'
+import Home from './views/Home'
 
 export default {
   name: 'tire-service',
   components: {
     navi,
     carousel,
-    contact
+    contact,
+    Home
   }
 }
 </script>
