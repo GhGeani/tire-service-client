@@ -3,16 +3,12 @@
   padding: 0;
 }
 body {
-  background: 
-  linear-gradient(
-      to left,
-    rgba(224, 224, 192, 0.7), 
-    rgba(214, 198, 198, 0.8)
-  ),
-  /* bottom, image */
-  url("./assets/bg/1.jpg");
-}
-html {
   height: 100%;
   width: 100%;
+  background: 
+  linear-gradient(
+      to bottom,
+    rgba(255, 255, 255, 0.2), 
+    rgba(163, 163, 163, 0.2)
+  )
 }
