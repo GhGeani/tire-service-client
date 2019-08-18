@@ -6,18 +6,18 @@
       span.navbar-toggler-icon
     .collapse.navbar-collapse.justify-content-center#navbarNavAltMarkup
       ul.navbar-nav
-        li.nav-item
+        router-link.nav-item(to="/" tag="li")
           i.fas.fa-home
-          router-link.nav-link(to="/") Acasă
-        li.nav-item
+          .nav-link Acasă
+        router-link.nav-item(to="/servicii" tag="li")
           i.fas.fa-tools
-          router-link.nav-link(to="/") Servicii
-        li.nav-item
+          .nav-link Servicii
+        router-link.nav-item(to="/vanzari" tag="li")
           i.fas.fa-shopping-cart
-          router-link.nav-link(to="/") Vânzări
-        li.nav-item
+          .nav-link Vânzări
+        a.nav-item(href="#contact" tag="li")
           i.fas.fa-address-book
-          router-link.nav-link(to="/") Contact
+          .nav-link Contact
 </template>
 
 <script>
@@ -50,10 +50,13 @@ export default {
   margin-right 5vw
   padding 3vw
   text-align center
+  cursor pointer
 
 .nav-item:hover
   background-color lightgrey 
   color #f56042
   transition 0.2s
+a
+  text-decoration none!important
 
 </style>
