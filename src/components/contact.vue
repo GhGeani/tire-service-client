@@ -1,21 +1,24 @@
 <template lang="pug">
-  section.container
+  #contact
     .row
-      .container.bg-light.text-dark.text-center
-        span.display-4.text-muted Contact
+      .container.text-center(style="background-color: #EA846F")
+        span.text-white.title Contact
     .row.mt-3
         .col-md-6
           ul.list-group
-            p.text-center.list-group-item.text-white(style="background-color: #EA846F") Unde mă poți găsi?
+            .container.text-center(style="background-color: #EA846F")
+              span.text-white.subtitle Date de contact
             i.fab.fa-facebook.list-group-item
-              button.btn.btn-link(href="https://www.facebook.com/badea.alinmarian") Badea Alin Marian
+              a.btn.btn-link(href="https://www.facebook.com/badea.alinmarian") Badea Alin Marian
             i.fab.fa-whatsapp.list-group-item 
               a.btn.btn-link(href="https://api.whatsapp.com/send?phone=0766712981") Trimite mesaj whatsapp
             i.fas.fa-phone-square-alt.list-group-item 
-              a.btn.btn-link(href="tel:+40766712981") Sună acum
+              a.btn.btn-link(href="tel:+40766712981") 0766 712 981
             i.fas.fa-envelope-square.list-group-item 
-              a.btn.btn-link(href="sms:+40766712981") Trimite sms
+              a.btn.btn-link(href="sms:+40766712981") 0766 712 981
         .col-md-6
+          .container.text-center(style="background-color: #EA846F")
+            span.text-white.subtitle Locație
           iframe#gmap_canvas(src='https://maps.google.com/maps?q=Parking%20Auto%20Ba%C8%99cov&t=&z=13&ie=UTF8&iwloc=&output=embed' frameborder='0' scrolling='yes' marginheight='0' marginwidth='0')
 </template>
 
@@ -53,5 +56,8 @@ iframe
 .fa-whatsapp
   color #00E676
   font-size 30px
-
+.title
+  font-size 30px
+.subtitle
+  font-size 20px
 </style>
