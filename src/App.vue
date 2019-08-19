@@ -3,7 +3,7 @@ main
   header
     navi
     carousel
-  section.container-fluid.mt-4.mb-4  
+  section.container.mt-4.mb-4  
     Home
   footer.container
     contact

@@ -3,10 +3,10 @@
     .row
       .container.text-center(style="background-color: #EA846F")
         span.text-white.title Anunțuri
-    .row(v-if="message === ''")
+    .row(v-if="response.status === 200")
       ul.list-group
-        announce(v-for="announce in data.data" :description="announce.description", :date="announce.date")
-    p.text-muted(v-else) {{ message }}
+        announce(v-for="announce in response.data.result" :description="announce.description" :date="announce.date")
+    .h5.text-muted.text-center(v-else) {{ response.statusText }}
 </template>
 
 <script>
@@ -16,23 +16,19 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      data: [],
-      message: ''
+      response: {}
     }
   },
   components: {
     announce
   },
   async mounted() {
-    const result = await this.getAll();
-    console.log(result);
-    if(result.status === 200) return this.data = result.data
-     return this.message = result.statusText;
+    await this.getAll();
+    console.log(this.response);
   },
   methods: {
     async getAll() {
-      const result =  await axios.get('http://localhost:3000/announces?page=1');
-      return result;
+      this.response = await axios.get('http://localhost:3000/announces?page=1');
     }
   }
 }
