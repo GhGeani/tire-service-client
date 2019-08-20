@@ -1,5 +1,5 @@
 <template lang="pug">
-    .carousel.slide#carouselExampleIndicators(data-ride='carousel')
+    .container.carousel.slide#carouselExampleIndicators(data-ride='carousel')
       ol.carousel-indicators
         li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
         li(data-target='#carouselExampleIndicators' data-slide-to='1')
