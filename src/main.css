@@ -12,3 +12,10 @@ body {
     rgba(163, 163, 163, 0.2)
   )
 }
+.title {
+  font-family: 'Livvic', sans-serif;
+  font-size: 30px;
+}
+.add-border-bottom{
+  border-bottom: 1px solid #EA846F;
+}
