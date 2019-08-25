@@ -1,8 +1,12 @@
 <template lang="pug">
 main
-  header
-    navi
-    carousel
+  navi
+  header.container
+    .row
+      .col-12.col-sm-12.col-md-12.col-lg-8.m-auto
+        carousel
+      .col-12.col-sm-12.col-md-12.col-lg-4.mt-3
+        announceList.border-bottom.border-warning
   section.container.mt-4.mb-4  
     Home
   footer.container
@@ -14,6 +18,8 @@ import navi from './components/navi'
 import carousel from './components/carousel'
 import contact from './components/contact'
 import Home from './views/Home'
+import announceList from './views/announce/list';
+
 
 export default {
   name: 'tire-service',
@@ -21,7 +27,8 @@ export default {
     navi,
     carousel,
     contact,
-    Home
+    Home,
+    announceList,
   }
 }
 </script>
