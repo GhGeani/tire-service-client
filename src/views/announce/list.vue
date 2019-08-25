@@ -1,9 +1,9 @@
 <template lang="pug">
   section.container
     .row
-      .container.text-center(style="background-color: #EA846F")
-        span.text-white.title Anunțuri
-    .row(v-if="response.status === 200")
+      .container.add-border-bottom.text-center.text-muted
+        span.title Anunțuri
+    .row.mt-4(v-if="response.status === 200")
       ul.list-group
         announce(v-for="announce in response.data.result" :description="announce.description" :date="announce.date")
     .h5.text-muted.text-center(v-else) {{ response.statusText }}
@@ -11,7 +11,6 @@
 
 <script>
 import announce from './announce';
-import axios from 'axios';
 
 export default {
   data() {
@@ -24,11 +23,10 @@ export default {
   },
   async mounted() {
     await this.getAll();
-    console.log(this.response);
   },
   methods: {
     async getAll() {
-      this.response = await axios.get('http://localhost:3000/announces?page=1');
+      this.response = await this.$http.get('http://localhost:3000/announces?page=1');
     }
   }
 }
