@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Services from '../views/services/list.vue';
-import Sales from '../views/sales/list.vue';
+import Sales from '../views/sales/main.vue';
 
 Vue.use(Router);
 
