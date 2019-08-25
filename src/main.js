@@ -8,6 +8,10 @@ import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
 import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 
+import axios from 'axios';
+
+Vue.prototype.$http = axios;
+
 import './main.css'
 
 Vue.config.productionTip = false
