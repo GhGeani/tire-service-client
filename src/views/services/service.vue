@@ -1,5 +1,9 @@
 <template lang="pug">
-  a.list-group-item.list-group-item(id='list-' + name + '-list' data-toggle="list" v-bind:href="`#list-${name}`" role="tab" aria-controls=name) {{ name }}
+  .col-12.col-sm-12.col-md-6.col-lg-4.mt-5
+    .container.text-center
+      i.fas.fa-tools
+      h5.text-muted.mt-3 {{ name }}
+      p.font-weight-light {{ description }}
 </template>
 
 <script>
@@ -12,5 +16,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+.fas
+  color #EA846F
+  font-size 30px
 </style>
