@@ -15,7 +15,7 @@
         router-link.nav-item(to="/vanzari" tag="li")
           i.fas.fa-shopping-cart
           .nav-link Vânzări
-        a.nav-item(href="#contact" tag="li")
+        router-link.nav-item(to="/contact" tag="li")
           i.fas.fa-address-book
           .nav-link Contact
 </template>
