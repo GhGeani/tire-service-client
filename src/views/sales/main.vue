@@ -1,18 +1,20 @@
 <template lang="pug">
   section.contianer
-    .row
-      .container(style="background-color: #EA846F")
-        .text-white.text-center.title Vânzări
-      list(v-if="response.status === 200" :response="response.data")
-      h5.m-auto.text-muted(v-else) {{ response.statusText }}
+    .container(style="background-color: #EA846F")
+      .text-white.text-center.title Vânzări
+    list(v-if="response.status === 200" :response="response.data")
+    h5.m-auto.text-muted(v-else) {{ response.statusText }}
+    contact
 </template>
 
 <script>
 import list from './list'
+import contact from '../../components/contact.vue'
 
 export default {
   components: {
-    list
+    list,
+    contact
   },
   data() {
     return {
