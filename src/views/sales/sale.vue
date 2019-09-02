@@ -1,8 +1,10 @@
 <template lang="pug">
-  section.col-12.col-md-12.col-lg-4
-    .card
+  .card
+    router-link(:to="`/vanzari/${id}`")
       img.card-img-top(v-bind:src="`http://localhost:3000/files/${images[0]}`")
-        
+    .card-body.pb-0.pt-1
+      p.card-title {{ title }}
+      small.card-subtitle.float-right {{ date }}
 </template>
 
 <script>
@@ -11,14 +13,16 @@ export default {
     title: String,
     description: String,
     images: Array,
-    date: String
-  },
-  mounted() {
-    console.log(this.images[0]);
-  },
+    date: String,
+    id: String
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-
+.card:hover
+  transition .1s
+  background-color #e8dec9
+img
+  cursor pointer
 </style>
