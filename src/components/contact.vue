@@ -1,5 +1,5 @@
 <template lang="pug">
-  #contact
+  .container
     .row
       .container.text-center(style="background-color: #EA846F")
         span.text-white.title Contact
@@ -21,16 +21,6 @@
             span.text-white.subtitle Locație
           iframe#gmap_canvas(src='https://maps.google.com/maps?q=Parking%20Auto%20Ba%C8%99cov&t=&z=13&ie=UTF8&iwloc=&output=embed' frameborder='0' scrolling='yes' marginheight='0' marginwidth='0')
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      
-    }
-  }
-}
-</script>
 
 <style lang="stylus" scoped>
 iframe
