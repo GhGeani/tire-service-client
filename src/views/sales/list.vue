@@ -1,7 +1,6 @@
 <template lang="pug">
-  section.border-bottom.border-warning
-    .row
-      sale(v-for="sale in response.result" :title="sale.title" :description="sale.description" :images="sale.images" :date="sale.date" :key="sale._id")
+  section.card-columns.mt-2.container
+    sale(v-for="sale in response.result" :title="sale.name" :description="sale.description" :images="sale.images" :date="sale.date" :id="sale._id" :key="sale._id")
 </template>
 
 <script>
@@ -17,5 +16,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 </style>
