@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card(v-if="response.status === 200").mt-5
+  .container(v-if="response.status === 200").mt-5
     .carousel.slide#sale(data-ride='carousel')
       ol.carousel-indicators
         li(v-for="(img, index) in response.data.images" :data-slide-to="index" data-target='#sale' v-bind:class="(index == 0) ? 'active' : ''")
