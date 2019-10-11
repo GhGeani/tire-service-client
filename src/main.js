@@ -7,10 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 import '../node_modules/@fortawesome/fontawesome-free/css/brands.css';
 import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
+import SocialSharing  from 'vue-social-sharing';
 
 import axios from 'axios';
+import config from './utils/config'
 
 Vue.prototype.$http = axios;
+Vue.prototype.$config = config;
+
+Vue.use(SocialSharing);
 
 import './main.css'
 

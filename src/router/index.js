@@ -1,11 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Services from '../views/services/list.vue';
 import Home from '../views/Home.vue';
-import Sales from '../views/sales/main.vue';
-import Sale from '../views/sales/getSale.vue';
-import Contact from '../components/contact.vue';
+import Sales from '../views/Sales.vue';
+import Contact from '../views/Contact.vue';
+import getSale from '../components/sales/getSale.vue';
 
 
 Vue.use(Router);
@@ -16,11 +15,6 @@ export default new Router ({
       path: '/',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/servicii',
-      name: 'Services',
-      component: Services
     },
     {
       path: '/vanzari',
@@ -34,8 +28,8 @@ export default new Router ({
     },
     {
       path: '/vanzari/:id',
-      name: 'Sale',
-      component: Sale
-    },
+      name: 'GetSale',
+      component: getSale
+    }
   ]
 });

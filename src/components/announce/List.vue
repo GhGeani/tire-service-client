@@ -1,8 +1,10 @@
 <template lang="pug">
   section
     .row
-      .container.add-border-bottom.text-center.text-muted
-        span.title Anunțuri
+      .container.text-center.text-muted 
+        hr
+        h3.title Anunțuri
+        hr
     .row.mt-4(v-if="response.status === 200")
       .container
         announce(v-for="announce in response.data.result" :description="announce.description" :date="announce.date")
@@ -10,7 +12,7 @@
 </template>
 
 <script>
-import announce from './announce';
+import announce from './Announce.vue';
 
 export default {
   data() {
@@ -26,13 +28,8 @@ export default {
   },
   methods: {
     async getAll() {
-      this.response = await this.$http.get('http://localhost:3000/announces?page=1');
+      this.response = await this.$http.get(`${this.$config.url}/announces?page=1`);
     }
   }
 }
 </script>
-
-<style lang="stylus" scoped>
-.title
-  font-size 30px
-</style>

@@ -1,10 +1,10 @@
 <template lang="pug">
-  section.card-columns.mt-2.container
+  .row
     sale(v-for="sale in response.result" :title="sale.name" :description="sale.description" :images="sale.images" :date="sale.date" :id="sale._id" :key="sale._id")
 </template>
 
 <script>
-import sale from './sale'
+import sale from './Sale'
 export default {
   props: {
     response: {}
@@ -15,5 +15,12 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="css" scoped>
+
+@media (max-width: 991.98px) {
+  img {
+    height: 15rem;
+    widows: 15rem;
+  }
+}
 </style>
