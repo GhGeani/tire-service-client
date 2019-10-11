@@ -10,7 +10,7 @@
           | Nu avem încă acest produs in stoc. 
           router-link(to="/contact") Contactează-ne
           |  pentru mai multe detalii sau verifică sectiunea de 
-          router-link(to="/anunturi") anunțuri
+          router-link(to="/contact") anunțuri
 </template>
 
 <script>
@@ -33,16 +33,15 @@ export default {
   methods: {
     async getAll() {
       this.loading = true;
-      this.response = await this.$http.get(`${this.$config.url}/items`,  { params: { page: 1 } } ); 
+      this.response = await this.$http.get(`${this.$config.url}/items`);
       this.loading = false;
     },
     async search() {
       const params = { page: 1 };
       if(this.words)  params.words = this.words.replace(/ /g, ',');
-      else  params.words = ' ';
+      else  params.words = ',';
       this.loading = true;
-      this.response = await this.$http.get(`${this.$config.url}/items/search`, { params });
-      this.words = '';
+      this.response = await await this.$http.get(`${this.$config.url}/items/search`, { params });
       this.loading = false;
     },
    

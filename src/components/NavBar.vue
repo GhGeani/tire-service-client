@@ -6,9 +6,8 @@
         i.fas.fa-tools
       router-link.nav-item(to="/vanzari" tag="li")
         i.fas.fa-shopping-cart
-      router-link.nav-item(to="/anunturi" tag="li")
-        i.fas.fa-bullhorn
       router-link.nav-item(to="/contact" tag="li")
+        i.fas.fa-bullhorn.mr-1
         i.fas.fa-envelope
 </template>
 
@@ -23,7 +22,7 @@ export default {
   opacity .9
 .nav-item
   padding .3rem
-  margin-right .3rem
+  margin-right .7rem
 .nav-item:hover
   background-color grey 
   transition 0.2s

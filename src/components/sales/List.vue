@@ -1,6 +1,6 @@
 <template lang="pug">
   .row
-    sale(v-for="sale in response.result" :title="sale.name" :description="sale.description" :images="sale.images" :date="sale.date" :id="sale._id" :key="sale._id")
+    sale(v-for="sale in response" :title="sale.name" :description="sale.description" :images="sale.images" :date="sale.date" :id="sale._id" :key="sale._id")
 </template>
 
 <script>
