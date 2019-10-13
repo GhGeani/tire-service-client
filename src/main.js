@@ -10,9 +10,17 @@ import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 import SocialSharing  from 'vue-social-sharing';
 
 import axios from 'axios';
-import config from './utils/config'
 
 Vue.prototype.$http = axios;
+
+const config = {};
+let url = 'http://localhost:3000';
+
+if (process.env.NODE_ENV === 'production') {
+  url = 'https://tire-backend.herokuapp.com';
+}
+config.url = url;
+
 Vue.prototype.$config = config;
 
 Vue.use(SocialSharing);
