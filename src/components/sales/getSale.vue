@@ -4,9 +4,9 @@
     .jumbotron.col-12.col-lg-8.bg-light.carousel.slide#imgs(data-ride='carousel')
       .carousel-inner.text-center.bg-light
         .carousel-item.img-container(v-for="(slide, index) in response.data.images" :class="{active: index === 0}")
-          img.img-thumbnail.resize-img(:src="`${$config.url}/files/${showedPhoto}`")
+          img.img-thumbnail.resize-img(:src="`https://tireshopimages.s3.eu-central-1.amazonaws.com/${showedPhoto}`")
       .container.d-flex.justify-content-center
-        img.img-thumbnail.img-indicator( data-target='#imgs' :data-slide-to='`index`' v-for="(slide, index) in response.data.images" :class="{active: index === 0}" :src="`${$config.url}/files/${slide}`" @click="changePhoto(slide)")
+        img.img-thumbnail.img-indicator( data-target='#imgs' :data-slide-to='`index`' v-for="(slide, index) in response.data.images" :class="{active: index === 0}" :src="`https://tireshopimages.s3.eu-central-1.amazonaws.com/${slide}`" @click="changePhoto(slide)")
     .card.col-12.col-lg-4.m-auto
       .card-body
         .card-title
