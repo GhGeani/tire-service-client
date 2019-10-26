@@ -4,7 +4,7 @@
       li(data-target='#imgs' :data-slide-to='`index`' v-for="(slide, index) in response.data" :class="{active: index === 0}")
     .carousel-inner
       .carousel-item.position-relative(v-for="(slide, index) in response.data" :class="{active: index === 0}")
-        img.img-fluid(:src="`https://tireshopimages.s3.eu-central-1.amazonaws.com/${slide.img}`")
+        img.img-fluid(:src="`https://tireshopimgs.s3.eu-central-1.amazonaws.com/${slide.img}`")
         .container-fluid.text-center.container-slide.position-absolute.pb-5
           p.text-white.text-slide.p-5 {{ slide.text }}
 </template>
