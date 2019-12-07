@@ -1,7 +1,7 @@
 <template lang="pug">
   .col-12.col-sm-6.col-md-4.col-lg-3.p-2
     router-link(:to="`/vanzari/${id}`" tag="div").card.link
-      img.img-thumbnail.card-img-top.max-height(v-bind:src="`https://tireshopimgs.s3.eu-central-1.amazonaws.com/${images[0]}`")
+      img.img-thumbnail.card-img-top.max-height(v-bind:src="`https://res.cloudinary.com/demsdreams/image/upload/v1573995199/${$config.folder}/${images[0]}.jpg`")
       .card-body
         strong.card-title {{ title }}
 </template>

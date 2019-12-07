@@ -4,9 +4,9 @@
     .jumbotron.col-12.col-lg-8.bg-light.carousel.slide#imgs(data-ride='carousel')
       .carousel-inner.text-center.bg-light
         .carousel-item.img-container(v-for="(slide, index) in response.data.images" :class="{active: index === 0}")
-          img.img-thumbnail.resize-img(:src="`https://tireshopimgs.s3.eu-central-1.amazonaws.com/${showedPhoto}`")
-      .container.d-flex.justify-content-center
-        img.img-thumbnail.img-indicator( data-target='#imgs' :data-slide-to='`index`' v-for="(slide, index) in response.data.images" :class="{active: index === 0}" :src="`https://tireshopimgs.s3.eu-central-1.amazonaws.com/${slide}`" @click="changePhoto(slide)")
+          img.img-thumbnail.resize-img(:src="`https://res.cloudinary.com/demsdreams/image/upload/v1573995199/${$config.folder}/${showedPhoto}.jpg`")
+      .container.d-flex.justify-content-center.overflow-auto
+        img.img-thumbnail.img-indicator(data-target='#imgs' :data-slide-to='`index`' v-for="(slide, index) in response.data.images" :class="{active: index === 0}" :src="`https://res.cloudinary.com/demsdreams/image/upload/v1573995199/${$config.folder}/${slide}.jpg`" @click="changePhoto(slide)")
     .card.col-12.col-lg-4.m-auto
       .card-body
         .card-title
@@ -14,6 +14,9 @@
         .card-subtitle
           strong Descriere:
         .font-italic {{ response.data.description }}
+        span
+          strong Publicat:
+          span {{ response.data.date }}
 </template>
 
 <script>

@@ -11,16 +11,17 @@ import SocialSharing  from 'vue-social-sharing';
 
 import axios from 'axios';
 
-Vue.prototype.$http = axios;
-
 const config = {};
 let url = 'http://localhost:3000';
+config.folder = 'tireshopdev';
 
 if (process.env.NODE_ENV === 'production') {
   url = 'https://tire-backend.herokuapp.com';
+  config.folder = 'tireshop';
 }
 config.url = url;
 
+Vue.prototype.$http = axios;
 Vue.prototype.$config = config;
 
 Vue.use(SocialSharing);
