@@ -2,18 +2,15 @@
 main.position-relative
   nav-bar
   router-view
-  foote
 </template>
 
 <script>
 import navBar from './components/NavBar'
-import foote from './components/Footer.vue'
 
 export default {
   name: 'tire-service',
   components: {
-    navBar,
-    foote
+    navBar
   }
 }
 </script>
