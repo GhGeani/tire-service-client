@@ -1,6 +1,6 @@
 <template lang="pug">
 section
-    presentation
+    presentation.text-center
     .container-fluid.text-center.bg-dark.text-white.p-5
       .row
         .col-12.col-md-6
