@@ -1,13 +1,11 @@
 <template lang="pug">
-  nav.navbar.navbar-dark.text-white.bg-dark.sticky-top.py-1
-    .navbar-brand VULCANIZARE
+  nav.navbar.navbar-dark.text-white.bg-dark.sticky-top.py-1.justify-content-around
     ul.nav
-      router-link.nav-item(to="/" tag="li")
+      router-link.nav-item.px-4.py-2(to="/" tag="li" title="Servicii")
         i.fas.fa-tools
-      router-link.nav-item(to="/vanzari" tag="li")
+      router-link.nav-item.px-4.py-2(to="/vanzari" tag="li" title="De vanzare")
         i.fas.fa-shopping-cart
-      router-link.nav-item(to="/contact" tag="li")
-        i.fas.fa-bullhorn.mr-1
+      router-link.nav-item.px-4.py-2(to="/contact" tag="li" title="Contact")
         i.fas.fa-envelope
 </template>
 
@@ -21,8 +19,7 @@ export default {
 .navbar
   opacity .9
 .nav-item
-  padding .3rem
-  margin-right .7rem
+  margin-right 1rem
 .nav-item:hover
   background-color grey 
   transition 0.2s
